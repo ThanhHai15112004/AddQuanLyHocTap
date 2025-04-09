@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/spinnerSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:textColorHint="#923535"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edittext"
+        android:id="@+id/edtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mô tả"
+        android:inputType="text" />
+
+    <EditText
+        android:textColorHint="#923535"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edittext"
+
+        android:id="@+id/edtStartTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Giờ bắt đầu"
+        android:inputType="time" />
+
+    <EditText
+        android:textColorHint="#923535"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edittext"
+
+        android:id="@+id/edtEndTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Giờ kết thúc"
+        android:inputType="time" />
+
+    <EditText
+        android:textColorHint="#923535"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edittext"
+
+        android:id="@+id/edtLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Địa điểm"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/spinnerDayOfWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

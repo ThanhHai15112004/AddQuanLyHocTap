@@ -1,0 +1,17 @@
+<!-- res/drawable/bg_red_button.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Khi nhấn -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#C62828" /> <!-- Đỏ đậm khi nhấn -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    <!-- Trạng thái mặc định -->
+    <item>
+        <shape>
+            <solid android:color="#F44336" /> <!-- Đỏ tươi -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</selector>

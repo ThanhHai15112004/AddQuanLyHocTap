@@ -1,81 +1,20 @@
 <resources>
-    <string name="app_name">Học Tập</string>
+    <string name="app_name">TaskManager</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="text_sign_up">"Sign Up"</string>
+    <string name="text_sign_in">"Sign In"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!-- Navigation -->
-    <string name="nav_timetable">Timetable</string>
-    <string name="nav_assignments">Assignments</string>
-    <string name="nav_scores">Scores</string>
-    <string name="nav_notes">Notes</string>
-
-    <!-- Common -->
-    <string name="add">Add</string>
-    <string name="edit">Edit</string>
-    <string name="delete">Delete</string>
-    <string name="save">Save</string>
-    <string name="cancel">Cancel</string>
-    <string name="no_data">No data available</string>
-    <string name="select">Select</string>
-
-    <!-- Timetable -->
-    <string name="list_view">List View</string>
-    <string name="calendar_view">Calendar View</string>
-    <string name="no_classes">No classes scheduled for this day</string>
-    <string name="add_class">Add Class</string>
-    <string name="edit_class">Edit Class</string>
-    <string name="subject">Subject</string>
-    <string name="day">Day</string>
-    <string name="start_time">Start Time</string>
-    <string name="end_time">End Time</string>
-    <string name="location">Location</string>
-
-    <!-- Assignments -->
-    <string name="no_assignments">No assignments found</string>
-    <string name="add_assignment">Add Assignment</string>
-    <string name="edit_assignment">Edit Assignment</string>
-    <string name="title">Title</string>
-    <string name="description">Description</string>
-    <string name="deadline">Deadline</string>
-    <string name="reminder">Reminder</string>
-    <string name="priority">Priority</string>
-    <string name="status">Status</string>
-    <string name="all_subjects">All Subjects</string>
-    <string name="all_priorities">All Priorities</string>
-    <string name="all_statuses">All Statuses</string>
-    <string name="low">Low</string>
-    <string name="medium">Medium</string>
-    <string name="high">High</string>
-    <string name="pending">Pending</string>
-    <string name="in_progress">In Progress</string>
-    <string name="completed">Completed</string>
-
-    <!-- Scores -->
-    <string name="no_scores">No scores found</string>
-    <string name="add_score">Add Score</string>
-    <string name="edit_score">Edit Score</string>
-    <string name="score_type">Score Type</string>
-    <string name="score_value">Score Value</string>
-    <string name="score_weight">Weight</string>
-    <string name="average_score">Average Score: %.2f</string>
-    <string name="all_semesters">All Semesters</string>
-
-    <!-- Notes -->
-    <string name="no_notes">No notes found</string>
-    <string name="add_note">Add Note</string>
-    <string name="edit_note">Edit Note</string>
-
-    <!-- Todo -->
-    <string name="no_todos">No to-do items found</string>
-    <string name="add_todo">Add To-Do</string>
-    <string name="edit_todo">Edit To-Do</string>
-    <string name="mark_completed">Mark as Completed</string>
-    <string name="mark_incomplete">Mark as Incomplete</string>
-
-    <!-- Subjects -->
-    <string name="manage_subjects">Manage Subjects</string>
-    <string name="add_subject">Add Subject</string>
-    <string name="edit_subject">Edit Subject</string>
-    <string name="subject_code">Subject Code</string>
-    <string name="subject_name">Subject Name</string>
-    <string name="semester">Semester</string>
 </resources>
-

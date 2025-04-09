@@ -1,0 +1,27 @@
+<!-- dialog_add_subject.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:textColorHint="#923535"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edittext"
+        android:id="@+id/editSubjectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên môn học"/>
+
+    <EditText
+        android:textColorHint="#923535"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edittext"
+        android:id="@+id/editSubjectCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã môn học"/>
+</LinearLayout>
