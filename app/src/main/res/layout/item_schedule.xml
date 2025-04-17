@@ -3,8 +3,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="12dp"
+    android:layout_margin="8dp"
     android:id="@+id/item_view"
-    android:background="#f2f2f2">
+    android:background="@drawable/bg_item_schedule">
 
     <TextView
         android:id="@+id/textTitle"

@@ -89,6 +89,30 @@ public class ScheduleFragment extends Fragment implements ScheduleAdapter.onLong
                 showAddScheduleDialog();
             }
         });
+
+        binding.ivCalendarNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                daySelect = (daySelect+1)%7;
+                updateScheduleList(daySelect);
+                binding.selectedDate.setText("Lịch học "+ days[daySelect]);
+            }
+        });
+
+        binding.ivCalendarPrevious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(daySelect == 0 ) {
+                    daySelect = 6;
+                    updateScheduleList(daySelect);
+                    binding.selectedDate.setText("Lịch học "+ days[daySelect]);
+                    return;
+                }
+                daySelect = daySelect -1;
+                updateScheduleList(daySelect);
+                binding.selectedDate.setText("Lịch học "+ days[daySelect]);
+            }
+        });
     }
 
     private void showAddScheduleDialog() {

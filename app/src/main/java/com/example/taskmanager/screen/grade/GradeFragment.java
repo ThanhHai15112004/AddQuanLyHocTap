@@ -1,5 +1,6 @@
 package com.example.taskmanager.screen.grade;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -32,7 +33,10 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
+
 public class GradeFragment extends Fragment {
     GradeAdapter adapter;
     DatabaseHelper db;
@@ -180,6 +184,21 @@ public class GradeFragment extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerSubjects.setAdapter(adapter);
 
+        edtDate.setOnClickListener(v -> {
+            final Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), (view1, selectedYear, selectedMonth, selectedDay) -> {
+                // Định dạng ngày: dd/MM/yyyy
+                String dateStr = String.format(Locale.getDefault(), "%02d/%02d/%04d", selectedDay, selectedMonth + 1, selectedYear);
+                edtDate.setText(dateStr);
+            }, year, month, day);
+
+            datePickerDialog.show();
+        });
+
         btnCancel.setOnClickListener(v -> dialog.dismiss());
 
         btnAdd.setOnClickListener(v -> {
@@ -212,6 +231,7 @@ public class GradeFragment extends Fragment {
 
         dialog.show();
     }
+
 
     private void updateScreen() {
         displayGrades();
