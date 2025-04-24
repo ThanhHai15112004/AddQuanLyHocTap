@@ -1,5 +1,6 @@
 package com.example.taskmanager.screen.assignment;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -254,6 +255,7 @@ public class AssignmentFragment extends Fragment {
         }
     }
 
+    @SuppressLint("ScheduleExactAlarm")
     private void scheduleNotification(Calendar reminderTime, long notificationId, long assignmentId) {
         // Cấu hình AlarmManager để gửi thông báo
         AlarmManager alarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);

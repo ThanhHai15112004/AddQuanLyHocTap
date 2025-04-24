@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+import android.app.TimePickerDialog;
 
 public class ScheduleFragment extends Fragment implements ScheduleAdapter.onLongClickInterfaces {
     DatabaseHelper db ;
@@ -41,6 +42,7 @@ public class ScheduleFragment extends Fragment implements ScheduleAdapter.onLong
     FragmentScheduleBinding binding;
     public ScheduleFragment() {
     }
+
 
     public static ScheduleFragment newInstance() {
         return new ScheduleFragment();
@@ -139,6 +141,10 @@ public class ScheduleFragment extends Fragment implements ScheduleAdapter.onLong
         EditText edtEndTime = view.findViewById(R.id.edtEndTime);
         EditText edtLocation = view.findViewById(R.id.edtLocation);
 
+        // Set click listeners for time fields
+        edtStartTime.setOnClickListener(v -> showTimePickerDialog(edtStartTime));
+        edtEndTime.setOnClickListener(v -> showTimePickerDialog(edtEndTime));
+
         Spinner spinnerSubject = view.findViewById(R.id.spinnerSubject);
         Spinner spinnerDayOfWeek = view.findViewById(R.id.spinnerDayOfWeek);
         ArrayAdapter<String> adapterDays = new ArrayAdapter<>(
@@ -148,7 +154,6 @@ public class ScheduleFragment extends Fragment implements ScheduleAdapter.onLong
         );
         adapterDays.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerDayOfWeek.setAdapter(adapterDays);
-
 
         ArrayAdapter<String> adapterSubject = new ArrayAdapter<>(
                 getContext(),
@@ -188,6 +193,26 @@ public class ScheduleFragment extends Fragment implements ScheduleAdapter.onLong
 
         builder.setNegativeButton("Hủy", null);
         builder.show();
+    }
+
+    private void showTimePickerDialog(EditText timeField) {
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
+
+        TimePickerDialog timePickerDialog = new TimePickerDialog(
+                getContext(),
+                (view, hourOfDay, minute1) -> {
+                    // Format the time as HH:MM
+                    String formattedTime = String.format(Locale.getDefault(), "%02d:%02d", hourOfDay, minute1);
+                    timeField.setText(formattedTime);
+                },
+                hour,
+                minute,
+                true // 24-hour format
+        );
+
+        timePickerDialog.show();
     }
 
     private void updateScheduleList(int dayOfWeek) {
@@ -296,6 +321,9 @@ public class ScheduleFragment extends Fragment implements ScheduleAdapter.onLong
         EditText edtLocation = view.findViewById(R.id.edtLocation);
         Spinner spinnerSubject = view.findViewById(R.id.spinnerSubject);
         Spinner spinnerDayOfWeek = view.findViewById(R.id.spinnerDayOfWeek);
+
+        edtStartTime.setOnClickListener(v -> showTimePickerDialog(edtStartTime));
+        edtEndTime.setOnClickListener(v -> showTimePickerDialog(edtEndTime));
 
         // Set adapter for day of week spinner
         ArrayAdapter<String> adapterDays = new ArrayAdapter<>(

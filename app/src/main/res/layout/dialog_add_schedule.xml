@@ -22,28 +22,32 @@
         android:inputType="text" />
 
     <EditText
-        android:textColorHint="#923535"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@drawable/bg_edittext"
-
         android:id="@+id/edtStartTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Giờ bắt đầu"
-        android:inputType="time" />
+        android:drawableEnd="@drawable/ic_time"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:background="@drawable/bg_edittext"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+    />
 
     <EditText
-        android:textColorHint="#923535"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@drawable/bg_edittext"
-
         android:id="@+id/edtEndTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Giờ kết thúc"
-        android:inputType="time" />
+        android:drawableEnd="@drawable/ic_time"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:background="@drawable/bg_edittext"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        />
 
     <EditText
         android:textColorHint="#923535"
